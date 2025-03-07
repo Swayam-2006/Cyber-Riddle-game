@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Riddle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cybersecurity Riddle Game</h1>
+
+        <div id="set-selection">
+            <h2>Select a Set:</h2>
+            <button onclick="selectSet(1)">Set 1</button>
+            <button onclick="selectSet(2)">Set 2</button>
+            <button onclick="selectSet(3)">Set 3</button>
+        </div>
+
+        <div id="difficulty-selection" style="display:none;">
+            <h2>Select Difficulty:</h2>
+            <button onclick="startGame('easy')">Easy</button>
+            <button onclick="startGame('moderate')">Moderate</button>
+            <button onclick="startGame('hard')">Hard</button>
+        </div>
+        
+        <div id="game-area" style="display:none;">
+            <p id="riddle"></p>
+            <input type="text" id="answer" placeholder="Enter your answer">
+            <button onclick="checkAnswer()">Submit</button>
+            <button onclick="showHint()">Need a hint?</button>
+            <button onclick="skipRiddle()">Skip Riddle</button> <!-- Skip Button -->
+            <p id="feedback"></p>
+            <p id="hint" style="display:none;"></p>
+            <p id="score">Score: 0</p>
+            <button onclick="nextRiddle()" id="next-btn" style="display:none;">Next Riddle</button>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
